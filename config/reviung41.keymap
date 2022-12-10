@@ -27,10 +27,10 @@
 
 		default_layer {
 			bindings = <
-   &kp TAB &mt LS(Q) Q &mt LS(W) W &mt LS(E) E &mt LS(R) R &mt LS(T) T   &mt LS(Y) Y &mt LS(U) U  &mt LS(I) I     &mt LS(O) O   &mt LS(P) P    &mt TILDE GRAVE 
+   &kp TAB &mt LS(Q) Q &mt LS(W) W &mt LS(E) E &mt LS(R) R &mt LS(T) T &mt LS(Y) Y &mt LS(U) U  &mt LS(I) I  &mt LS(O) O &mt LS(P) P &mt TILDE GRAVE 
    &mt LCTRL RET &mt LS(A) A &mt LS(S) S &mt LS(D) D &mt LS(F) F &mt LS(G) G  &mt LS(H) H &mt LS(J) J &mt LS(K) K &mt LS(L) L &mt COLON SEMI &mt DQT SQT
-   &mt LSHFT BSLH &mt LS(Z) Z &mt LS(X) X &mt LS(C) C &mt LS(V) V &mt LS(B) B   &mt LS(N) N &mt LS(M) M  &mt LT COMMA &mt GT DOT &mt QMARK FSLH &mt RSHFT RET
-			&kp LGUI  &mt LALT ESC &lt 1 SPACE &lt 2 BSPC  &mt LG(GRAVE) DEL
+   &mt LSHFT BSLH &mt LS(Z) Z &mt LS(X) X &mt LS(C) C &mt LS(V) V &mt LS(B) B  &mt LS(N) N &mt LS(M) M &mt LT COMMA &mt GT DOT &mt QMARK FSLH &mt LG(GRAVE) RET
+			&kp LGUI &mt LALT ESC &lt 1 SPACE &mt RSHFT BSPC &lt 2 DEL
 			>;
 		};
 
@@ -48,7 +48,7 @@
    &trans &kp F1    &kp F2    &kp F3    &kp F4    &kp F5        &kp F6    &kp F7    &kp F8    &kp F9    &kp F10   &kp F11
    &trans &none &kp LG(LEFT) &kp LG(UP)  &kp LG(RIGHT)  &none      &kp HOME  &kp PG_DN &kp PG_UP &kp END   &kp LC(LG(LEFT))    &kp LC(LG(RIGHT))
    &trans &none   &none  &kp LG(DOWN) &kp LG(D) &none       &kp LG(N1)  &kp LG(N2)  &kp LG(N3)  &kp LG(N4)  &kp LG(N5)  &kp LG(GRAVE)
-		&trans   &trans    &trans     &trans  &kp LA(F4)
+		&trans   &trans    &trans     &trans  &trans
 			>;
 		};
 
