@@ -19,4 +19,4 @@
 ---
 include:
   - board: nrfmicro_13
-    shield: reviung41
+    shield: reviung34
