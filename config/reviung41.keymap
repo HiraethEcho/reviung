@@ -16,17 +16,6 @@
 #define ADJUST 3
 
 / {
-    behaviors {
-        new_behavior: new_behavior {
-            compatible = "zmk,behavior-hold-tap";
-            label = "NEW_BEHAVIOR";
-            bindings = <&none>, <&none>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
-        };
-    };
 
     combos {
         compatible = "zmk,combos";
@@ -36,10 +25,6 @@
             key-positions = <19 20>;
         };
     };
-
-    &mt { quick-tap-ms = <200>; };
-
-    &lt { quick-tap-ms = <200>; };
 
     keymap {
         compatible = "zmk,keymap";
