@@ -30,23 +30,22 @@
     };
 
     behaviors {
-        new_behavior: new_behavior {
-            compatible = "zmk,behavior-hold-tap";
-            label = "NEW_BEHAVIOR";
-            bindings = <&none>, <&none>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
-        };
-
         lefthome: lefthome {
             compatible = "zmk,behavior-mod-morph";
             label = "LEFTHOME";
             bindings = <&kp LEFT>, <&kp HOME>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI|MOD_LCTL)>;
+        };
+
+        downpagedown: downpagedown {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DOWNPAGEDOWN";
+            bindings = <&kp DOWN>, <&kp PAGE_DOWN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI|MOD_RGUI|MOD_LSFT|MOD_LALT|MOD_RCTL|MOD_RSFT|MOD_RALT|MOD_LCTL)>;
         };
     };
 
