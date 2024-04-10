@@ -36,6 +36,12 @@
             key-positions = <19 20>;
         };
     };
+&lt {
+quick-tap-ms = <200>;
+};
+&mt {
+quick-tap-ms = <200>;
+};
 
     keymap {
         compatible = "zmk,keymap";
