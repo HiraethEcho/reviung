@@ -15,14 +15,38 @@
 #define RAISE  2
 #define ADJUST 3
 
-/ {
+&lt { quick-tap-ms = <200>; };
 
+&mt { quick-tap-ms = <200>; };
+
+/ {
     combos {
         compatible = "zmk,combos";
 
         jk {
             bindings = <&kp ESCAPE>;
             key-positions = <19 20>;
+        };
+    };
+
+    behaviors {
+        new_behavior: new_behavior {
+            compatible = "zmk,behavior-hold-tap";
+            label = "NEW_BEHAVIOR";
+            bindings = <&none>, <&none>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+        };
+
+        lefthome: lefthome {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LEFTHOME";
+            bindings = <&kp LEFT>, <&kp HOME>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
 
@@ -49,10 +73,10 @@
 
         raise_layer {
             bindings = <
-&bt BT_SEL 0  &kp F1                &kp F2                &kp F3                &kp F4                &kp F5                 &kp F6    &kp F7         &kp F8       &kp F9     &kp F10          &bt BT_CLR_ALL
-&bt BT_SEL 1  &kp LA(NUMBER_1)      &kp LA(NUMBER_2)      &kp LA(NUMBER_3)      &kp LA(NUMBER_4)      &kp LA(N5)             &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT  &kp F11          &kp F12
-&bt BT_SEL 2  &kp LA(LS(NUMBER_1))  &kp LA(LS(NUMBER_2))  &kp LA(LS(NUMBER_3))  &kp LA(LS(NUMBER_4))  &kp LA(LS(N5))         &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &rgb_ug RGB_TOG  &rgb_ug RGB_EFF
-                                                          &trans                &trans                                &mo 3            &trans         &trans
+&bt BT_SEL 0  &kp F1                &kp F2                &kp F3                &kp F4                &kp F5                 &kp F6     &kp F7         &kp F8       &kp F9     &kp F10          &bt BT_CLR_ALL
+&bt BT_SEL 1  &kp LA(NUMBER_1)      &kp LA(NUMBER_2)      &kp LA(NUMBER_3)      &kp LA(NUMBER_4)      &kp LA(N5)             &lefthome  &kp DOWN       &kp UP       &kp RIGHT  &kp F11          &kp F12
+&bt BT_SEL 2  &kp LA(LS(NUMBER_1))  &kp LA(LS(NUMBER_2))  &kp LA(LS(NUMBER_3))  &kp LA(LS(NUMBER_4))  &kp LA(LS(N5))         &kp HOME   &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &rgb_ug RGB_TOG  &rgb_ug RGB_EFF
+                                                          &trans                &trans                                &mo 3             &trans         &trans
             >;
         };
 
