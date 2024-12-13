@@ -5,7 +5,6 @@
 */
 
 #include <behaviors.dtsi>
-#include <reviung.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
@@ -56,7 +55,7 @@
   keymap {
     compatible = "zmk,keymap";
 
-    base {
+    default_layer {
       bindings = <
         &kp TAB                   &kp Q  &kp W  &kp E   &kp R        &kp T               &kp Y  &kp U                      &kp I         &kp O       &kp P          &kp GRAVE
         &mt LCTRL ESCAPE          &kp A  &kp S  &kp D   &kp F        &kp G               &kp H  &kp J                      &kp K         &kp L       &kp SEMICOLON  &mt RIGHT_CONTROL ENTER
@@ -65,7 +64,7 @@
       >;
     };
 
-    raise {
+    lower_layer {
       bindings = <
         &trans    &kp N1     &kp N2    &kp N3     &kp N4                &kp N5                         &kp N6            &kp N7             &kp N8          &kp N9           &kp N0          &kp TILDE
         &trans    &kp EXCL   &kp AT    &kp HASH   &kp DOLLAR            &kp PERCENT                    &kp LEFT          &kp DOWN           &kp UP          &kp RIGHT        &kp MINUS       &kp EQUAL
@@ -74,7 +73,7 @@
       >;
     };
 
-    Fn {
+    raise_layer {
       bindings = <
         &sys_reset       &kp F1           &kp F2           &kp F3           &kp F4           &kp F5                   &kp F6                &kp F7         &kp F8           &kp F9                &kp F10     &rgb_ug RGB_TOG
         &bt BT_CLR       &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &out OUT_BLE     &out OUT_USB             &kp HOME              &kp PAGE_DOWN  &kp PAGE_UP      &kp END               &kp F11     &kp F12
